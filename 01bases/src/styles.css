@@ -39,3 +39,16 @@
   .p-1 {
     padding: 1px;
   }
+
+  .row{
+    display: flex;
+    gap: 10px;
+  }
+  .col{
+    flex-grow: 1;
+
+  }
+  input{
+    display: block;
+    margin-bottom: 10px;
+  }
