@@ -1,0 +1,49 @@
+<h2>Por pais</h2>
+<hr>
+<div class="row">
+    <div class="col">
+        <form (ngSubmit)="buscar()" autocomplete="off">
+            <input 
+                type="text" name="termino" 
+                id="" class="form-control" 
+                placeholder="buscar pais..."
+                [(ngModel)]="termino"
+            >
+        </form>
+    </div>
+</div>
+
+<hr>
+<div class="alert alert-danger">
+    No se encontro nada con el término jwek
+</div>
+
+<div class="row">
+    <div class="col">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Column 1</th>
+                        <th scope="col">Column 2</th>
+                        <th scope="col">Column 3</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="">
+                        <td scope="row">R1C1</td>
+                        <td>R1C2</td>
+                        <td>R1C3</td>
+                        <td>
+                            <a href="">
+                                Ver detalle
+                            </a> 
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+</div>

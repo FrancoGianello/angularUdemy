@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-md-4 col-sm-6 animate__animated animate__fadeIn animate_faster" *ngFor="let value of resultados">
+        <div class="card">
+            <img [src]="value.images.downsized_medium.url" alt="value.title" class="">
+            <div class="card-body">
+                <p class="card-text">
+                    {{value.title}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
