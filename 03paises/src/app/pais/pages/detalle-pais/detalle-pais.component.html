@@ -1,1 +1,42 @@
-<p>detalle-pais works!</p>
+<div 
+    *ngIf="!pais ; else divPais"    
+    class="alert alert-info">
+    Espere por favor...
+</div>
+<ng-template #divPais>
+    <div class="row">
+        <div class="col">
+            <h1>Pais: {{pais.name.common}}</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <h3>Bandera</h3>
+            <img [src]="pais.flags.png" alt="" class="img-thumbnail">
+        </div>
+        <div class="col">
+            <h3>Información</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h3>Capital: {{pais.capital[0] | titlecase}}</h3>
+                </li>
+                <li class="list-group-item">
+                    <h3>Población: {{pais.population | number}}</h3>
+                </li>
+                <li class="list-group-item">
+                    <h3>Codigo: {{pais.altSpellings[0] | uppercase}}</h3>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <h3>Traducciones</h3>
+    <div class="row">
+        <div class="col">
+            <span class="badge bg-primary mr-1" 
+                *ngFor="let pais of pais.translations | keyvalue"> 
+                {{pais.key}}: {{pais.value.official}} 
+            </span>
+        </div>
+    </div>
+</ng-template>

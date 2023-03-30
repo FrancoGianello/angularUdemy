@@ -5,6 +5,9 @@ import { PaisComponent } from './pages/pais/pais.component';
 import { RegionComponent } from './pages/region/region.component';
 import { DetallePaisComponent } from './pages/detalle-pais/detalle-pais.component';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { PaisTablaComponent } from './components/pais-tabla/pais-tabla.component';
+import { PaisInputComponent } from './components/pais-input/pais-input.component';
 
 
 
@@ -13,7 +16,9 @@ import { FormsModule } from '@angular/forms';
     CapitalComponent,
     PaisComponent,
     RegionComponent,
-    DetallePaisComponent
+    DetallePaisComponent,
+    PaisTablaComponent,
+    PaisInputComponent
   ],
   exports:[
     CapitalComponent,
@@ -23,7 +28,9 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+
+    RouterModule
   ]
 })
 export class PaisModule { }
