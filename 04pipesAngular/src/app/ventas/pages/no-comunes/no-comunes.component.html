@@ -1,0 +1,68 @@
+<div class="text-layout">
+    <h1>Decimales y porcentaje</h1>
+    <p>Pipes incluidos en angular - Usualmente en common module</p>
+</div>
+
+<div class="grid">
+    <div class="col md:col-6">                
+        <p-fieldset legend="i18nSelect pipe" [toggleable]="true">
+            <p class="m-0">
+                Saludos {{nombre}} es un placer 
+                {{genero | i18nSelect:invitacionMapa}}
+            </p>
+            <hr>
+            <p-button (click)="cambiarNombre()" styleClass="p-button-secondary" label="Cambiar nombre"></p-button>
+        </p-fieldset>
+    </div>
+    <div class="col md:col-6">                
+        <p-fieldset legend="i18nPlural pipe" [toggleable]="true">
+            <p class="m-0">
+                Actualmente {{clientes.length | i18nPlural:clientesMapa}}
+            </p>
+            <hr>
+            <p-button (click)="borrarNombre()" styleClass="p-button-secondary" label="Borrar nombre"></p-button>
+            <p-button (click)="resetClientes()" styleClass="p-button-secondary" label="Reset"></p-button>
+        </p-fieldset>
+    </div>
+    
+    <div class="col md:col-6">                
+        <p-fieldset legend="KeyValue pipe" [toggleable]="true">
+            <ul>
+                <li *ngFor="let value of persona | keyvalue" >
+                    {{value.key}}: {{value.value}}
+                </li>
+            </ul>
+        </p-fieldset>
+    </div>
+    
+    <div class="col md:col-6">                
+        <p-fieldset legend="Async pipe" [toggleable]="true">
+            <pre>{{miObservable |async}}</pre>
+            <pre *ngIf="!(valorPromesa | async)">Resolviendo promesa...</pre>
+            <pre>{{valorPromesa |async}}</pre>
+        </p-fieldset>
+    </div>
+
+    <div class="col md:col-6">                
+        <p-fieldset legend="Slice pipe" [toggleable]="true">
+            <b>Original</b>
+            <pre>{{clientes}}</pre>
+            <b>Slice 0:2</b>
+            <pre>{{clientes | slice:0:2}}</pre>
+            <b>Slice 1:2</b>
+            <pre>{{clientes | slice:1:2}}</pre>
+            <b>Slice 3:3</b>
+            <pre>{{clientes | slice:3:3}}</pre>
+            <b>Slice 0:4 (un string)</b>
+            <pre>{{ nombre | slice:0:4}}</pre>
+        </p-fieldset>
+    </div>
+    
+    <div class="col md:col-6">                
+        <p-fieldset legend="Json pipe" [toggleable]="true">
+            <pre>
+                {{personajes | json}}
+            </pre>
+        </p-fieldset>
+    </div>
+</div>
