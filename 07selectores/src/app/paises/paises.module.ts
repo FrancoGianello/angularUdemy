@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { AuthRoutingModule } from './auth-routing.module';
-import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
+
+import { PaisesRoutingModule } from './paises-routing.module';
+import { SelectorPageComponent } from './pages/selector-page/selector-page.component';
 
 
 @NgModule({
   declarations: [
-    RegisterPageComponent
+    SelectorPageComponent
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule,
+    PaisesRoutingModule,
+
     ReactiveFormsModule
   ]
 })
-export class AuthModule { }
+export class PaisesModule { }
