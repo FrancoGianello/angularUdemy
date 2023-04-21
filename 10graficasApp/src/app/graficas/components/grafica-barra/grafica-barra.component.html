@@ -1,1 +1,7 @@
-<p>grafica-barra works!</p>
+
+<canvas baseChart class="chart"
+    [data]="barChartData"
+    [options]="barChartOptions"
+    [type]="barChartType">
+</canvas>
+<button *ngIf="boton" class="btn btn-primary" (click)="randomize()">Randomize</button>

@@ -1,1 +1,18 @@
-<p>donut-http works!</p>
+<h1>Donut http</h1>
+<hr>
+
+<div class="alert alert-info" *ngIf="doughnutChartLabels.length===0;else divGrafica">
+    Cargando datos...
+</div>
+<div class="row">
+    <div class="col">
+        <ng-template #divGrafica>
+            <div class="container">
+                <canvas baseChart class="chart"
+                    [data]="doughnutChartData"
+                    [type]="doughnutChartType">
+                </canvas>
+            </div>
+        </ng-template>
+    </div>
+</div>
