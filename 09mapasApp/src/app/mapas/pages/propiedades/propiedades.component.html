@@ -1,0 +1,26 @@
+<div class="row mt-3">
+    <div class="col-2"></div>
+    <div class="col">
+        <h1>Propiedades</h1>
+        <hr>
+    </div>
+    <div class="row container">
+        <div class="col-2">
+
+        </div>
+        <div class="col">
+            <div class="row">
+                <div class="col-4 mb-2"
+                        *ngFor="let value of propiedades">
+                    <div class="card">
+                        <app-mini-mapa [lngLat]="value.lngLat" class="card-img-top"></app-mini-mapa>
+                        <div class="card-body">
+                            <h4 class="card-title">{{value.titulo}}</h4>
+                            <p class="card-text">{{value.descripcion}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
